@@ -1,0 +1,30 @@
+
+Download and install:
+
+    https://code.visualstudio.com/download
+
+Extensions:
+
+    Live Server 5.6.1
+    Material Icon Theme
+    Pretty Formatter
+
+
+UI:
+
+HTML
+
+
+
+CSS
+JavaScript
+BootStrap
+JSON
+AJAX
+
+Frameworks or libraries:
+
+jQuery
+Angular
+React
+
