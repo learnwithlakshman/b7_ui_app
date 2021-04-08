@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Web UI</title>
-    <style>
-        .cust-heading{
-            background-color: gray;
-            color: white;
-            padding: 5px;
-        }
-    </style>
-</head>
-<body>
-        <h3 class="cust-heading">Headings</h3>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning Web UI</title>
+        <link rel="stylesheet" href="css/main.css">
+    
+    </head>
+    <body>
+
+        <header>
+            <nav style="background-color: crimson;color: white;">
+                <img src="img/icon-med.jpg" width="50px" height="50px" id="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="cbook.html">ContactBook</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </header>
+
+        <h3 class="cust-heading" id="cust-id-heading">Headings</h3>
 
         <h1>Heaing  -1</h1>
         <h2>Heading -2</h2>
@@ -25,23 +33,248 @@
 
         <h3 class="cust-heading">Paragraphs</h3>
         <p>
-            <strong>Lorem</strong> exercitationem, <del>fuga porro consectetur</del> tenetur laborum eligendi similique est hic ipsam veniam? Libero, impedit earum.
-            Nihil, laborum. <i>Ab voluptatibus ullam nobis! Lorem ipsum </i>dolor sit amet consectetur adipisicing elit. Saepe id perspiciatis ea sit, pariatur maxime adipisci debitis deleniti atque voluptates modi provident, vel voluptatum fuga? Voluptates minus odit possimus recusandae!
+            <strong>Lorem</strong>
+            exercitationem,
+            <del>fuga porro consectetur</del>
+            tenetur laborum eligendi similique est hic ipsam veniam? Libero, impedit earum.
+                        Nihil, laborum.
+            <i>Ab voluptatibus ullam nobis! Lorem ipsum
+            </i>dolor sit amet consectetur adipisicing elit. Saepe id perspiciatis ea sit, pariatur maxime adipisci debitis deleniti atque voluptates modi provident, vel voluptatum fuga? Voluptates minus odit possimus recusandae!
         </p>
         <p>
-            <strong>Lorem</strong> exercitationem, fuga porro consectetur tenetur laborum eligendi similique est hic ipsam veniam? Libero, impedit earum.
-            Nihil, laborum. Ab voluptatibus ullam nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe id perspiciatis ea sit, pariatur maxime adipisci debitis deleniti atque voluptates modi provident, vel voluptatum fuga? Voluptates minus odit possimus recusandae!
+            <strong>Lorem</strong>
+            exercitationem, fuga porro consectetur tenetur laborum eligendi similique est hic ipsam veniam? Libero, impedit earum.
+                        Nihil, laborum. Ab voluptatibus ullam nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe id perspiciatis ea sit, pariatur maxime adipisci debitis deleniti atque voluptates modi provident, vel voluptatum fuga? Voluptates minus odit possimus recusandae!
         </p>
         <p>
             H<sub>2</sub>O, 2R<sup>2</sup>, log<sub>(10)</sub>
         </p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
         Iusto quam deleniti iste sit perspiciatis quasi,soluta tempore ea nam commodi.<br>
         Veritatis hic quaerat id? Voluptatibus quibusdam amet illo praesentium dignissimos.
         <h3 class="cust-heading">Hyper links</h3>
+
+        <a href="http://www.googl.com" target="_blank">Google</a><br>
+        <a href="cbook.html">ContactBook</a><br>
+        <a href="#cust-id-heading">Headings</a>
+
+
         <h3 class="cust-heading">Images</h3>
+
+        <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px">
+        <img src="img/pexels-yaroslav-shuraev-4472968.jpg" alt="Technology Images" width="300px" height="200px">
+        <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px">
+        <img src="img/pexels-yaroslav-shuraev-4472968.jpg" alt="Technology Images" width="300px" height="200px">
+
         <h3 class="cust-heading">Tables</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Edit|Delete</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Krish</td>
+                    <td>krish.t@gmail.com</td>
+                    <td>765432189</td>
+                    <td>
+                        <a href="#">Edit</a>
+                        &nbsp;
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Manoj</td>
+                    <td>manoj.pvn@gmail.com</td>
+                    <td>765432185</td>
+                    <td>
+                        <a href="#">Edit</a>
+                        &nbsp;
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Charan</td>
+                    <td>charan.s@gmail.com</td>
+                    <td>765432189</td>
+                    <td>
+                        <a href="#">Edit</a>
+                        &nbsp;
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="5">LWL - Student Report</th>
+                </tr>
+                <tr>
+                    <th>Branch</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th colspan="2">Score and Result</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td rowspan="3">MCA</td>
+                    <td>1</td>
+                    <td>Krish</td>
+                    <td>9</td>
+                    <td>PASS</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Manoj</td>
+                    <td>8</td>
+                    <td>PASS</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lakshman</td>
+                    <td>3</td>
+                    <td>Fail</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">MBA</td>
+                    <td>4</td>
+                    <td>Krish</td>
+                    <td>9</td>
+                    <td>PASS</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Manoj</td>
+                    <td>8</td>
+                    <td>PASS</td>
+                </tr>
+
+            </tbody>
+        </table>
         <h3 class="cust-heading">Forms</h3>
-        
-</body>
+
+        <form method="POST" action="login.html">
+            <fieldset>
+                <legend>Login form</legend>
+                <p>
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your email">
+                </p>
+                <p>
+                    <label>Password:</label>
+                    <input type="password" placeholder="Enter your password">
+                </p>
+                <p>
+                    <input type="submit" value="Login">
+                </p>
+            </fieldset>
+        </form>
+
+        <hr>
+        <form>
+            <fieldset>
+                <legend>Course : Registration form</legend>
+                <p>
+                    <label>Name:
+                    </label>
+                    <input type="text" name="name" placeholder="Enter your fullname">
+
+                </p>
+                <p>
+                    <label>Email:
+                    </label>
+                    <input type="email" name="email" placeholder="Enter your email">
+
+                </p>
+                <p>
+                    <label>Sex:
+                    </label>
+                    <input type="radio" name="sex" value="male">Male
+                    <input type="radio" name="sex" value="female">Female
+
+                </p>
+                <p>
+                    <label>Language:
+                    </label>
+                    <input type="checkbox" value="eng" name="language">English
+                    <input type="checkbox" value="kan" name="language">Kannada
+                    <input type="checkbox" value="Hin" name="language">Hindi
+                </p>
+                <p>
+                    <label>Qualification</label>
+                    <select name="qualification">
+                        <option value="">Select your qualification</option>
+                        <option value="mca">MCA</option>
+                        <option value="bca">BCA</option>
+                        <option value="be">BE</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Course:
+                    </label>
+                    <select name="course" multiple>
+                        <option value="">Select course(s)</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="mongodb">ManogoDB</option>
+                        <option value="devOps">DevOps</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Message:
+                    </label>
+                    <textarea cols="100" rows="5"></textarea>
+                </p>
+                <p>
+                    <label>&nbsp;</label>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </p>
+            </fieldset>
+        </form>
+        <h3 class="cust-heading">List ( Ordered and Unordered )</h3>
+        <h3>Java FullStack</h3>
+        <ul>
+            <li>Core Java</li>
+            <ol>
+                <li>Basics</li>
+                <li>JVM and JRE</li>
+                <li>Collection</li>
+            </ol>
+            <li>UI Components</li>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>Angular</li>
+                <li>React</li>
+            </ol>
+            <li>Database</li>
+            <ol>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+            
+            </ol>
+        </ul>
+
+        <footer>
+            &copy; lwl - 2021, Bangalore-70
+        </footer>
+    </body>
 </html>
