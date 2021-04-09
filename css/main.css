@@ -42,7 +42,7 @@ li a{
 }
 
 .intro-section{
-    background-image: url('/img/ui_introduction.jpg');
+    background-image: url('../img/ui_introduction.jpg');
     height: 10rem;
     background-position: center;
     background-size: cover;
