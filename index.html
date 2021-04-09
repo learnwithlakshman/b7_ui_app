@@ -6,12 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Learning Web UI</title>
         <link rel="stylesheet" href="css/main.css">
-    
+        
     </head>
     <body>
 
+        <!-- Start of header-->
         <header>
-            <nav style="background-color: crimson;color: white;">
+            <nav style="background-color: rgb(146, 26, 0)">
                 <img src="img/icon-med.jpg" width="50px" height="50px" id="logo">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -21,8 +22,17 @@
                 <div class="clear"></div>
             </nav>
         </header>
+        <!-- End of header-->
 
-        <h3 class="cust-heading" id="cust-id-heading">Headings</h3>
+        <section>
+            <div class="intro-section">           
+                 <h3>Learning UI is fun!</h3>
+                 <p>Here we are going learn HTML, CSS, JS, Bootstrap, Angular.... Lorem ipsum</p>
+            </div>
+
+        </section>
+
+        <h3 class="cust-heading">Headings</h3>
 
         <h1>Heaing  -1</h1>
         <h2>Heading -2</h2>
@@ -60,14 +70,20 @@
 
 
         <h3 class="cust-heading">Images</h3>
+        <section class="images">
+            <div class="cust-img"><img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px">
+            </div>
+            <div class="cust-img"> <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px"></div>
+            <div class="cust-img"> <img src="img/pexels-yaroslav-shuraev-4472968.jpg" alt="Technology Images" width="300px" height="200px"></div>
+            <div class="cust-img"> <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px"></div>
+            
+        </section>
 
-        <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px">
-        <img src="img/pexels-yaroslav-shuraev-4472968.jpg" alt="Technology Images" width="300px" height="200px">
-        <img src="img/pexels-pixabay-373076.jpg" alt="Technology Images" width="300px" height="200px">
-        <img src="img/pexels-yaroslav-shuraev-4472968.jpg" alt="Technology Images" width="300px" height="200px">
+        <div class="clear"></div>
 
         <h3 class="cust-heading">Tables</h3>
-        <table border="1">
+        <section class="tables">
+        <table id="contact-table">
             <thead>
                 <tr>
                     <th>#</th>
@@ -115,7 +131,7 @@
             </tbody>
         </table>
         <br>
-        <table border="1">
+        <table class="cust-res-table">
             <thead>
                 <tr>
                     <th colspan="5">LWL - Student Report</th>
@@ -165,26 +181,10 @@
 
             </tbody>
         </table>
+    </section>
         <h3 class="cust-heading">Forms</h3>
 
-        <form method="POST" action="login.html">
-            <fieldset>
-                <legend>Login form</legend>
-                <p>
-                    <label>Email:</label>
-                    <input type="email" placeholder="Enter your email">
-                </p>
-                <p>
-                    <label>Password:</label>
-                    <input type="password" placeholder="Enter your password">
-                </p>
-                <p>
-                    <input type="submit" value="Login">
-                </p>
-            </fieldset>
-        </form>
-
-        <hr>
+        <section class="form-wrapper">
         <form>
             <fieldset>
                 <legend>Course : Registration form</legend>
@@ -238,7 +238,7 @@
                 <p>
                     <label>Message:
                     </label>
-                    <textarea cols="100" rows="5"></textarea>
+                    <textarea></textarea>
                 </p>
                 <p>
                     <label>&nbsp;</label>
@@ -247,6 +247,8 @@
                 </p>
             </fieldset>
         </form>
+    </section>
+
         <h3 class="cust-heading">List ( Ordered and Unordered )</h3>
         <h3>Java FullStack</h3>
         <ul>
