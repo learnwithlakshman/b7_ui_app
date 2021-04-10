@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Examples</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            width: 96%;
+            margin: auto;
+        }
+    </style>
+   
+    
+</head>
+<body>
+
+     <!-- Start of header-->
+     <header>
+        <nav style="background-color: rgb(146, 26, 0)">
+            <img src="img/icon-med.jpg" width="50px" height="50px" id="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">HTML & CSS</a></li>
+                <li><a href="js.html">JavaScript</a></li>
+                <li><a href="cbook.html">ContactBook</a></li>
+            </ul>
+            <div class="clear"></div>
+        </nav>
+    </header>
+    <!-- End of header-->
+    <div>
+        <h3>Basics</h3>
+
+        <button onclick="showDateAndTime()">Click me to Display date and time</button>
+        <p id="id_date_time"></p>
+        
+        <p id="id_greetings">Good morning...</p>
+        <button onclick="document.querySelector('#id_greetings').innerHTML='<h4>Welcome to JavaScript World</h4>'">Click</button>
+      
+        <div class="clear"></div>
+       
+        <br/>
+       
+        <img src="img/js/pic_bulboff.gif" id="id_bulb">
+
+        <button  onclick="document.querySelector('#id_bulb').src='img/js/pic_bulbon.gif'" >On</button>
+        <button  onclick="document.querySelector('#id_bulb').src='img/js/pic_bulboff.gif'" >Off</button>
+
+        <button onclick="changeStatus()">On/Off</button>
+        
+        <br/><br/>
+        <p id="newsdata">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsam enim fugiat praesentium ipsa possimus illo, veritatis voluptate? Sint quasi eius sit quidem deserunt, rerum ad ipsam eos labore consequuntur.
+        </p>
+        <button onclick="document.querySelector('#newsdata').style.display = 'none'">-</button>
+        <button onclick="document.querySelector('#newsdata').style.display = 'block'">+</button>
+
+    </div>
+    <br/>
+    <section>
+
+        <div class="row">
+            <input type="text" placeholder="Enter the number to print table" id="id_input_num">
+            <button onclick="showTable()">Table</button>
+        </div>
+        <div id="id_show_table"></div>
+    </section>
+    
+    
+     <script src="js/main.js"></script>  
+  
+</body>
+</html>
