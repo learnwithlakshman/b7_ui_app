@@ -69,8 +69,50 @@
         <div id="id_show_table"></div>
     </section>
     
-    
+    <section id="content">
+
+        <h3>User Details</h3>
+        <ul class="userul"></ul>
+        <input type="text" name="user" id="user" placeholder="Enter the user name">
+        <button id="addnew">Add User</button>
+
+    </section>
+
+    <section id="content">
+
+        <p>
+            <label>Enter num value:</label>
+            <input type="text" name="num1" id="inputNum" placeholder="Enter the num value">
+            <div id="showResult"></div>
+            <br>
+            <button id="btnreverse">Reverse</button>
+            <button id="btnfactorial">Factorial</button>
+            <button id="btnprime">Check Prime</button>
+        </p>
+
+    </section>
+
+    <section id="content">
+        <p>
+            <label>Enter num1 </label>
+            <input type="text" name="num1" id="num1" placeholder="Enter the num1 value">
+        </p>
+        <p>
+        <label> Enter num2 </label>
+        <input type="text" name="num2" id="num2" placeholder="Enter the num2 value">
+        </p>
+        <p>
+            <label>Result: </label>
+            <input type="text" disabled id="result">
+        </p>
+        <p>
+           
+            <button id="addBtn" onclick="addTwoNumber()">Add</button>
+        </p>
+    </section>
+   
      <script src="js/main.js"></script>  
+     <script src="js/functions.js"></script>  
   
 </body>
 </html>

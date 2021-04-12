@@ -23,3 +23,5 @@ function showTable(){
         }
         document.querySelector("#id_show_table").innerHTML = str;
 }
+
+

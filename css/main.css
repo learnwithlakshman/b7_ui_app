@@ -148,3 +148,22 @@ input[type=text],input[type=email], select, textarea {
       color: white;
       padding: 10px;
   }
+
+  #content{
+      width: 50%;
+      margin: auto;
+      margin-top: 20px;
+      border: 1px solid blueviolet;
+      padding: 10px;
+  }
+  p,label{
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  #addBtn{
+      padding: 5px 50px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+  }
