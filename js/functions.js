@@ -78,7 +78,6 @@ addnew.addEventListener('click',()=>{
         }
 
 })
-
 const btnreverse = document.querySelector("#btnreverse");
 const btnprime = document.querySelector("#btnprime");
 const btnfactorial = document.querySelector("#btnfactorial");
