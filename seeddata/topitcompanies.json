@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Rolta India",
+    "sales": 2172,
+    "employees": 2700
+  },
+  {
+    "name": "Oracle Financial Services",
+    "sales": 5038,
+    "employees": 8818
+  },
+  {
+    "name": "Mindtree",
+    "sales": 7839,
+    "employees": 16470
+  },
+  {
+    "name": "Mphasis",
+    "sales": 7907,
+    "employees": 21994
+  },
+  {
+    "name": "L&T Infotech (LTI)",
+    "sales": 10878,
+    "employees": 22000
+  },
+  {
+    "name": "HCL Technologies",
+    "sales": 18594,
+    "employees": 117781
+  },
+  {
+    "name": "Tech Mahindra",
+    "sales": 38060,
+    "employees": 38060
+  },
+  {
+    "name": "Wipro",
+    "sales": 63862,
+    "employees": 166790
+  },
+  {
+    "name": "Infosys",
+    "sales": 93594,
+    "employees": 200364
+  },
+  {
+    "name": "TCS",
+    "sales": 161541,
+    "employees": 390880
+  }
+]
