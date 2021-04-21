@@ -92,3 +92,29 @@ document.querySelector("#search").addEventListener('keyup',(event)=>{
         let searchRes =  books.filter(book=>book.title.includes(event.target.value));
         showBooks(searchRes);
 })
+
+let books =[
+    {
+        title:"An Integratecd approach",
+        author: "R. Nageswara Rao",
+        price : 550
+
+    },
+    {
+        title: "Core Java: Let us Java",
+        author: "Yaswanth",
+        price: 380
+    },
+    {
+        title: "Core Java: Let us C",
+        author: "Yaswanth",
+        price: 480
+    },
+    {
+        title: "Core Java: Let us PHP",
+        author: "Yaswanth",
+        price: 280,
+       
+    }
+];
+
