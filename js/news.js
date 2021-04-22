@@ -40,7 +40,10 @@ countryEle.addEventListener('change',(event)=>{
         // xhttp.send();
 
         fetch(url)
-            .then(response=>response.json())
+            .then(response=>
+                {
+                    
+                   return response.json()})
             .then(newsItems=>{
                 let articles = newsItems.articles;
                 for(let i=0;i<articles.length;i++){
