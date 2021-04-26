@@ -28,3 +28,48 @@ jQuery
 Angular
 React
 
+
+
+IPL reference link:
+
+https://niranjan-ipl.firebaseapp.com/analyse
+
+IPL API document link:
+
+https://ipl2020-stat.herokuapp.com/
+
+
+Installation of Angular
+
+
+    Node:
+    
+       https://nodejs.org/en/
+
+       npm (Node package Manager)
+
+    Angular:
+
+       https://angular.io/
+
+    Install Angular CLI
+       
+        npm install -g @angular/cli
+
+    Angular JS   Vs Angular
+    1               >= 2        => 11
+
+    Creating new angular project:
+
+    ng new my-angular-app
+
+    Run angular application:
+
+    ng serve
+
+    http://localhost:4200
+
+    
+    clone the project:
+
+    npm install

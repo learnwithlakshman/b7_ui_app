@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+
+.cust-nav{
+    background: #563d7c;
+}
+
+.logo{
+    color: #fff im !important;
+    border:  1px solid white;
+    padding: 1px 10px 5px 10px;
+    border-radius: 8px;
+}
+.cust-heading{
+    background-color:#563d7c ;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}

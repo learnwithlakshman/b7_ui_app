@@ -57,3 +57,27 @@ function showPieChart(chartData){
 
 showTeamLabels();
 
+
+const maxpaidplayers = document.querySelector("#maxpaidplayers");
+
+function maxPaidPlayerDetails(){
+    let url = `${baseUrl}maxamountbyrole`;
+
+    fetch(url).then(data=>data.json()).then(res=>{
+        console.log(res);
+        let html = '';
+        res.forEach(ele=>{
+            html += `<h4>Max paid ${ele.role} and Amount :(INR) ${Number.parseFloat(ele.amount)}</h4>`;
+            html += `<table class='table'><thead class='thead-dark'><tr><th>Name</th><th>Role</th><th>Amount</th></head><tbody>`;
+
+            ele.players.forEach(player=>{
+                html += `<tr><td>${player.name}</td><td>${player.role}</td><td>${player.price}</td></tr>`;
+            })
+            html += '</tbody></table>';
+
+        })
+        maxpaidplayers.innerHTML = html;
+    })
+}
+
+maxPaidPlayerDetails();

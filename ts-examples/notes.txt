@@ -1,0 +1,45 @@
+TypeScript:
+
+1. Alternative to JavaScript ( Super Set )
+2. Allows us to use strict TypeScript
+3. Support all object oriented features
+4. Support all the modern javascript (arrow function, let, const)
+5. Interface, Enums, Generics
+6. Angular Developer uses TypeScript
+
+typescript (.ts) => .js => run on browsers
+
+
+TypeScript installation: 
+
+    => Node
+      npm => node package manager
+
+    => npm install typescript -g 
+
+
+    public
+    private
+    readonly
+
+
+    1. Angular 
+
+    npm install -g @angular/cli
+    
+    create new project:
+
+    ng new hello-world
+
+    cd hello-world
+
+    ng serve
+
+    SPA:
+
+      Single Page Appplication
+
+
+    angularjs   => Angular-1
+
+    angular = 11
