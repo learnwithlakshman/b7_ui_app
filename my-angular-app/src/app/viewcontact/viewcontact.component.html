@@ -1,0 +1,14 @@
+<div class="card mt-2 mb-2">
+    <div class="card-body" *ngIf="userData">
+        <div class="card-title">{{userData.name | uppercase}}</div>
+        <p class="card-text">
+            <i class="fa fa-at"> : {{userData.email}}</i><br>
+            <i class="fa fa-birthday-cake"> : {{userData.dob|date:'fullDate'}}</i><br>
+            <i class="fa fa-phone"> : {{userData.mobile}}</i><br>
+        </p>
+        <span class="float-right">
+            <i class="fa fa-trash" (click)='removeContact(userData.name)'></i>
+        </span>
+    </div>
+   
+</div>

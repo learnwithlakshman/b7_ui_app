@@ -53,11 +53,19 @@
               <h5 class="card-title">{{userprofile.name | uppercase}}</h5>
               <p class="card-text">
                   <i class="fa fa-at"> : {{userprofile.email}}</i><br>
-                  <i class="fa fa-file">:{{userprofile.salary | currency}}</i><br>
-                  <i class="fa fa-birthday-cake">:{{userprofile.dob | date}}</i><br>
+                  <i class="fa fa-file"> : {{userprofile.salary | currency}}</i><br>
+                  <i class="fa fa-birthday-cake"> : {{userprofile.dob | date:'dd-MMMM-YYYY'}}</i><br>
+                  <i class="fa fa-info"> : {{userprofile.about | summary:'L':30}}</i><br>
               </p>
             </div>
           </div>
         </div>
-    <div class="col"></div>
+    <div class="col">
+        <p class="cust-heading"> Sharing data  - Contact APP</p>
+        <div *ngIf="contacts.length > 0">
+            <div *ngFor="let c of contacts">
+                <app-viewcontact [userData]="c" (removeEle)='deleteContact($event)'></app-viewcontact>
+            </div>
+        </div>
+    </div>
 </div>

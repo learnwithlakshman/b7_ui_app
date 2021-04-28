@@ -1,3 +1,4 @@
+import { Contact } from './../model/contact.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -28,8 +29,40 @@ export class HomeComponent implements OnInit {
           name:"Krish",
           email:"krish@gmail.com",
           salary:5600,
-          dob:new Date(1984,7,6)
+          dob:new Date(1984,7,6),
+          about:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quia culpa commodi ab, deleniti similique aliquam ullam totam rerum qui excepturi necessitatibus ipsam, nemo et nostrum perferendis minima labore! Voluptates.'
   }
+
+  contacts:Contact[] = [
+    {
+      name:"Krish",
+      email:"krish@gmail.com",
+      mobile:'87654345673',
+      dob:new Date(1984,7,6)
+    },
+    {
+      name:"Manoj",
+      email:"manoj@gmail.com",
+      mobile:'87654345673',
+      dob:new Date(1989,2,2)
+    },
+    
+    {
+      name:"Ramesh",
+      email:"ramesh@gmail.com",
+      mobile:'87654345675',
+      dob:new Date(1982,7,6)
+    },
+    
+    {
+      name:"John",
+      email:"john@gmail.com",
+      mobile:'87654345673',
+      dob:new Date(1981,0,1)
+    }
+    
+
+  ]
 
   constructor() { }
 
@@ -47,6 +80,10 @@ export class HomeComponent implements OnInit {
   }
   removeItem(index:number){
       this.todos.splice(index,1);
+  }
+
+  deleteContact(name:string){
+      this.contacts = this.contacts.filter(c=>c.name !== name);
   }
 
 }

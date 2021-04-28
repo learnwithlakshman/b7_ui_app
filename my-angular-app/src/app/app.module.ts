@@ -9,6 +9,8 @@ import { FormsComponent } from './forms/forms.component';
 import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { SummaryPipe } from './shared/summary.pipe';
+import { ViewcontactComponent } from './viewcontact/viewcontact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     ServicesComponent,
     FormsComponent,
     ProjectComponent,
-    HomeComponent
+    HomeComponent,
+    SummaryPipe,
+    ViewcontactComponent
   ],
   imports: [
     BrowserModule,
