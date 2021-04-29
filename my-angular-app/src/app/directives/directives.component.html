@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col">
+        <div class="mt2">
+            <p class="cust-heading">Directives : (if, switch and for)</p>
+
+            <div *ngIf="usernames.length > 0; then showData else noData"></div>
+            <ng-template #showData>
+                {{usernames | json}}
+            </ng-template>
+            <ng-template #noData>
+                <p>There are no users to show</p>
+            </ng-template>
+        </div>
+        <div class="mt-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link"  [class.active]="viewtype == 'map'" (click)="viewtype ='map'">Map</a></li>
+                <li class="nav-item"><a  class="nav-link" [class.active]="viewtype == 'list'" (click)="viewtype = 'list'">List</a></li>
+                <li class="nav-item"><a  class="nav-link" [class.active]="viewtype == 'table'" (click)="viewtype = 'table'">Table</a></li>
+            </ul>
+            <div [ngSwitch]="viewtype">
+                <div *ngSwitchCase="'map'">
+                    <p class="lead">Details will be shown in Map view</p>
+                </div>
+                <div *ngSwitchCase="'table'">
+                    <p class="lead">Details will be shown in Table view</p>
+                </div>
+                <div *ngSwitchCase="'list'">
+                    <p class="lead">Details will be shown in  List view</p>
+                </div>
+                <div *ngSwitchDefault>
+                    <p class="lead">Details will be shown in Default view</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div *ngFor="let name of usernames;index as i">
+                {{i+1}}. {{name}} 
+            </div>
+        </div>
+        <div class="mt-3">
+             <div *ngFor="let member of members">
+                 <span [ngClass]="{
+                     'text-warning':member.card=='gold',
+                     'text-secondary':member.card=='silver',
+                     'text-success':member.card=='diamond'
+    
+                    }">
+                     {{member.name}}
+                 </span>
+             </div>
+        </div>
+        <div class="mt-3">
+            <button class="btn" [ngStyle]="{
+                'backgroundColor': status ? 'green' : 'red',
+                'color': status ? 'white' : 'yellow'
+            }" (click)="changeStatus()">Change Style</button>
+        </div>
+        <div class="mt-3">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="username" class="form-control" appTransform>
+                <br>
+                {{username}} - {{username.length}}
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>

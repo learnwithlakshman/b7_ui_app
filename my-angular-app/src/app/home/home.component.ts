@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   heading = "Courses Offered";
   courses = ["HTML","CSS","AJAX","JSON","Angular"];
   imgUrl = '../../assets/databinding_1.png';
+  isSelected = true;
   users = [ 
             {"name":"Krish","email":"krish@gmail.com","isworking":true},
             {"name":"Manoj","email":"manoj@gmail.com","isworking":false},
@@ -84,6 +85,9 @@ export class HomeComponent implements OnInit {
 
   deleteContact(name:string){
       this.contacts = this.contacts.filter(c=>c.name !== name);
+  }
+  changeStarStatus(){
+      this.isSelected = !this.isSelected;
   }
 
 }
