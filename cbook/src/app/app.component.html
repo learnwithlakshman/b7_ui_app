@@ -1,0 +1,33 @@
+<div class="container">
+
+    <form [formGroup]="regForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter the full name">
+            <span class="text-danger" *ngIf="name.touched && name.errors?.required">
+                Username can't be empty
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" formControlName="email" id="email" placeholder="Enter the full name">
+            <span class="text-danger" *ngIf="email.touched && email.errors?.required">
+                Email can't be empty
+            </span>
+        </div>
+        <p class="lead">Address</p>
+        <div formGroupName="address">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" formControlName="city" id="city" placeholder="Enter the  city name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" [disabled]="!regForm.valid">Submit</button>
+        </div>
+    </form>
+    {{regForm.value | json}}
+    <router-outlet></router-outlet>
+
+</div>
