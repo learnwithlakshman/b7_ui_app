@@ -57,7 +57,7 @@
         </div>
         <div class="mt-3">
             <div class="form-group">
-                <input type="text" [(ngModel)]="username" class="form-control" appTransform>
+                <input type="text" [(ngModel)]="username" class="form-control" [appTransform]="'upper'">
                 <br>
                 {{username}} - {{username.length}}
             </div>
