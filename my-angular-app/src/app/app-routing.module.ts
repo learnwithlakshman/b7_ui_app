@@ -29,7 +29,11 @@ const routes: Routes = [
     },{
       path:'directives',
       component:DirectivesComponent
+    },{
+      path:'epms',
+      loadChildren:()=>import('./epms/epms.module').then(m=>m.EpmsModule)
     }
+
 
 ];
 

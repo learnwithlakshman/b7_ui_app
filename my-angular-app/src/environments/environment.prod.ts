@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl:"https://lwlepms.herokuapp.com/epms/api/v1/employees"
 };

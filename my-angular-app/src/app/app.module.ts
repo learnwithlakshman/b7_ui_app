@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,8 @@ import { TransformDirective } from './shared/directives/transform.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

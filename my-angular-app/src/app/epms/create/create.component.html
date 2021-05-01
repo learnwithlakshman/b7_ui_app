@@ -1,0 +1,50 @@
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+
+        <form [formGroup]="empProfile" (ngSubmit)="submitForm()" id="empForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control form-control-sm" formControlName="name" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control form-control-sm" formControlName="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="text" class="form-control form-control-sm" formControlName="mobile" id="mobile" name="mobile">
+            </div>
+            <div class="from-group">
+                Gender: 
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="gender" formControlName="gender" [value]="'M'">
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="gender"  formControlName="gender" [value]="'F'">
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                  </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="mobile">Dept:</label>
+                <select formControlName="dept" id="dept" name="dept" class="form-control form-control-sm">
+                    <option disabled selected>Select Department</option>
+                    <option [value]="'SALES'">SALES</option>
+                    <option [value]="'IT'">IT</option>
+                    <option [value]="'MARKETING'">MARKETING</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" class="form-control form-control-sm" formControlName="salary" id="salary" name="salary">
+            </div>
+            
+            <div class="from-group">
+                <button class="btn btn-primary btn-sm">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</div>
