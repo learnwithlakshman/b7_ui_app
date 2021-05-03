@@ -1,3 +1,5 @@
+import { EpmsService } from './../service/epms.service';
+import { Employee } from './../model/emp.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,12 +18,22 @@ export class CreateComponent implements OnInit {
     dept:[''],
     salary:[''],
     gender:['']
-})
-  constructor(private fb:FormBuilder) { }
+  })
+  message = ""
+  constructor(private fb:FormBuilder,private epmsService:EpmsService) { }
 
   ngOnInit(): void {
   }
   submitForm(){
+        let emp:Employee = this.empProfile.value;
+        this.epmsService.addEmployee(emp).subscribe(res=>{
+            emp = res;
+            this.message = "Employee is added with id :"+emp.id;
+            this.empProfile.reset();
+            setTimeout(()=>{
+              this.message = "";
+            },3000)
+        })
       
   }
 }

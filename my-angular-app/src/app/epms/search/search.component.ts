@@ -20,11 +20,12 @@ export class SearchComponent implements OnInit {
 
   search(){
    let value = this.searchText;
-   if(value){
+   if(this.searchText){
         this.empService.search(value).subscribe(res=>{
-            console.log(res);
             this.empList = res;
         })
+   }else{
+       this.empList =[];
    }
   }
 }

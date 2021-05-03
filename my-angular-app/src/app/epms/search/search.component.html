@@ -1,7 +1,7 @@
 <div class="row mt-2">
     <div class="col-md-8 offset-md-2">
         <div class="form-group">
-            <input type="text" [(ngModel)]="searchText" placeholder="Enter the name to search" class="form-control" (keyup.enter)="search()">
+            <input type="text" [(ngModel)]="searchText" placeholder="Enter the name to search" class="form-control" (keyup)="search()">
         </div>
     </div>
  
@@ -14,7 +14,7 @@
         </ng-template>
         <ng-template #showData>
             <div *ngFor="let emp of empList">
-                <div class="card">
+                <div class="card mt-2">
                     <div class="card-header">
                      {{emp.id}} 
                     </div>

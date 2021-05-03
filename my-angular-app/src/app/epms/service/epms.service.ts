@@ -17,4 +17,8 @@ export class EpmsService {
     let url = `${this.baseUrl}/search/${searchText}`
       return this.http.get<Employee[]>(url);
   }
+  addEmployee(emp:Employee):Observable<Employee>{
+    let url = `${this.baseUrl}`;
+    return this.http.post<Employee>(url,emp);
+  }
 }

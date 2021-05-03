@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ServicesComponent } from './services/services.component';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { FormsComponent } from './forms/forms.component';
 import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +19,7 @@ import { TransformDirective } from './shared/directives/transform.directive';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ServicesComponent,
+  
     FormsComponent,
     ProjectComponent,
     HomeComponent,
@@ -33,7 +33,8 @@ import { TransformDirective } from './shared/directives/transform.directive';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

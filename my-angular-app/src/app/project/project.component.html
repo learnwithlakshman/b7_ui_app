@@ -1,1 +1,15 @@
-<p>project works!</p>
+<div class="row mt-2">
+    <div class="col">
+        <select *ngIf="labels" class="form-control" [(ngModel)]="selectedLabel" (change)="onChange()">
+            <option disabled selected>Select Team Label</option>
+            <option *ngFor="let label of labels" [value]="label">{{label}}</option>
+        </select>
+    </div>
+    
+    <div class="col" >
+        <div *ngIf="chartData.length !=0">
+            <google-chart [data]="pieChart"></google-chart>
+
+        </div>
+    </div>
+</div>

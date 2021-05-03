@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl:"http://localhost:8080/epms/api/v1/employees"
+  baseUrl:"http://localhost:8080/epms/api/v1/employees",
+  iplbaseUrl:"https://iplstatapp.herokuapp.com/api/v1/iplstat/"
 };
 
 /*
