@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <div id="loginForm">
+        <div *ngIf="errorMessage" class="text-danger text-center">{{errorMessage}}</div>
+        <div *ngIf="successMessage" class="text-success text-center">{{successMessage}}</div>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input  type="email" id="username" formControlName="username" class="form-control" name="username" placeholder="Enter the user name">
+            </div>
+            <div class="form-group">
+                <label for="password">Passsword</label>
+                <input  type="password" id="password" formControlName="password" name="password" class="form-control" placeholder="Enter the password">
+            </div>
+            <div>
+                <button class="btn btn-primary" *ngIf="isLogin"  [disabled]="!userForm.valid">Login</button>
+                <button class="btn btn-primary" *ngIf="!isLogin" [disabled]="!userForm.valid">Register</button> | <a style="cursor: pointer" class="text-primary" (click)="onChange()">{{message}}</a>
+            </div>
+ 
+        </form>
+       
+        </div>
+    </div>
+</div>

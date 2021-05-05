@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+
+import { UserMinProfile, AuthService } from './../auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  userMinProfile:UserMinProfile|undefined;
+  constructor(private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+        this.authService.userProfileEvent.subscribe(resp=>{
+          this.userMinProfile = resp;
+        })
+       if(this.authService.isUserLoggedIn()){
+           this.userMinProfile = this.authService.getUserMinProfile();
+       }
   }
 
+  logout(){
+      this.authService.logout();
+      this.router.navigate(['/'])
+  }
 }

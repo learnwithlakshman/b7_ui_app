@@ -14,6 +14,7 @@ import { SummaryPipe } from './shared/summary.pipe';
 import { ViewcontactComponent } from './viewcontact/viewcontact.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { TransformDirective } from './shared/directives/transform.directive';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TransformDirective } from './shared/directives/transform.directive';
     SummaryPipe,
     ViewcontactComponent,
     DirectivesComponent,
-    TransformDirective
+    TransformDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

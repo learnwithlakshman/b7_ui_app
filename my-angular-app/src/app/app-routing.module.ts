@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsComponent } from './forms/forms.component';
@@ -8,11 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-    {
-      path:'',
-      component:HomeComponent,
-      pathMatch:'full'
-    },{
+  {
+    path: '',
+    component: LoginComponent,
+    pathMatch:'full',
+
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+
+  },{
       path:'forms',
       component:FormsComponent
     },{
