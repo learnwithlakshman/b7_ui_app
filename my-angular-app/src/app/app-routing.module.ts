@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ProjectComponent } from './project/project.component';
@@ -21,21 +22,26 @@ const routes: Routes = [
 
   },{
       path:'forms',
-      component:FormsComponent
+      component:FormsComponent,
+      canActivate: [AuthGuard]
     },{
       path:'project',
-      component:ProjectComponent
+      component:ProjectComponent,
+      canActivate: [AuthGuard]
     },
     {
       path:'home',
-      component:HomeComponent
+      component:HomeComponent,
+      canActivate: [AuthGuard]
      
     },{
       path:'directives',
-      component:DirectivesComponent
+      component:DirectivesComponent,
+      canActivate: [AuthGuard]
     },{
       path:'epms',
-      loadChildren:()=>import('./epms/epms.module').then(m=>m.EpmsModule)
+      loadChildren:()=>import('./epms/epms.module').then(m=>m.EpmsModule),
+      canActivate: [AuthGuard]
     }
 
 

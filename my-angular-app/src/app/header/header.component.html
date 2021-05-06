@@ -26,8 +26,8 @@
     </div>
     <div>
       <div *ngIf="userMinProfile">
-        <span class="text-white">{{userMinProfile.username}}</span>
-        <a (click)="logout()">Logout</a>
+        <span class="text-white">{{userMinProfile.username}}</span>|
+        <a (click)="logout()" class="btn btn-primary">Logout</a>
       </div>
     </div>
   </nav>

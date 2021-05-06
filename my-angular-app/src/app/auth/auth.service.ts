@@ -53,14 +53,15 @@ export class AuthService {
   }
 
   login(email:string,password:string){
-     
-          // if(user.password === password){
-          //   this.userProfile = {"email":user.email,"username":user.username,"role":user.role};
-          //   localStorage.setItem("user",JSON.stringify(this.userProfile));
-          //   this.userProfileEvent.emit(this.userProfile);
-          //   return true;
+          let user = this.loadUserByEmail(email);
+          if(user.password === password){
+            this.userProfile = {"email":user.email,"username":user.username,"role":user.role};
+            localStorage.setItem("user",JSON.stringify(this.userProfile));
+            this.userProfileEvent.emit(this.userProfile);
+          }
+            return true;
 
-          return this.http.post('https://indipl2020.herokuapp.com/authenticate',{"username":email,"password":password});
+          
         
   }
   storeToken(token:string){

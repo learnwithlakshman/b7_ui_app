@@ -24,18 +24,17 @@ export class LoginComponent implements OnInit {
   }
 
   login(f:any){
-      //Logic
+ 
       this.isValid = false;
       let email = f.value.email;
       let pwd = f.value.password;
       console.log(email,pwd);
 
-    this.authService.login(email,pwd).subscribe(res=>{
+     if(this.authService.login(email,pwd)){
+         this.router.navigate(['project']);
+     }
 
-        this.token = (res as any)["token"];
-        this.authService.storeToken(this.token);
-        this.router.navigate(['project']);
-    })
+ 
 
     
 

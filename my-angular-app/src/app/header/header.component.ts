@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor(private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+        this.userMinProfile = this.authService.getUserMinProfile();
         this.authService.userProfileEvent.subscribe(resp=>{
           this.userMinProfile = resp;
         })
