@@ -1,7 +1,8 @@
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand text-success">TODO</a>
-    <form class="form-inline" >
+   
+    <form class="form-inline" *ngIf="username">
       <span class="mr-2 text-success">{{username}}</span>
-      <button class="btn btn-outline-primary my-2 my-sm-0">Logout</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" (click)="logout()">Logout</button>
     </form>
 </nav>

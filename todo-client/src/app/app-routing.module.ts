@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/auth.guard';
 import { ArchiveComponent } from './archive/archive.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -16,11 +17,13 @@ const routes: Routes = [
     },
     {
       path:'home',
-      component:HomeComponent
+      component:HomeComponent,
+      canActivate:[AuthGuard]
     },
     {
       path:'archive',
-      component:ArchiveComponent
+      component:ArchiveComponent,
+      canActivate:[AuthGuard]
     }
 
 ];

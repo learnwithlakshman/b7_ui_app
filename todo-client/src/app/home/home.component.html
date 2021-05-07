@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="row mt-2">
+    <div class="col-md-10">
+        <p class="lead">Create a form to add TODO</p>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary">Archive</button>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-md-8 offset-md-2"  *ngIf="todos.length > 0">
+        <p class="lead" *ngFor="let todo of todos">{{todo | json}} <button class="btn btn-danger" (click)="onDelete(todo)">Delete</button>
+           |<button class="btn btn-info" (click)="onUpdate(todo)">Edit</button>    
+        </p>
+    </div>
+</div>
